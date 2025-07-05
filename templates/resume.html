@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Resume{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<section class="resume-section">
+  <h2 class="section-title">Mening Rezyumem</h2>
+
+  <div class="resume-container">
+
+    <!-- Chap taraf: Rasm -->
+    <div class="resume-photo">
+      <img src="{% static 'images/me.jpg' %}" alt="Mening rasmi">
+    </div>
+
+    <!-- O'ng taraf: Tajriba va ko‘nikmalar -->
+    <div class="resume-details">
+
+      <div class="resume-grid">
+        <div class="resume-left">
+          <h3><b style="color: crimson;">Ta'lim</b></h3>
+          <div class="resume-item">
+            <h4>Toshkent davlat iqtisodiyot universiteti</h4>
+            <p>2022 - Hozirga qadar</p>
+            <p>Bakalavr | Moliya va moliyaviy texnologiyalar</p>
+          </div>
+
+          <h3><b style="color: crimson;">Tajriba</b></h3>
+          <div class="resume-item">
+            <h4>Junior Python Developer</h4>
+            <p>2024 - Hozirga qadar</p>
+            <p>Telegram botlar, Web saytlar, Restfull API integratsiyasi</p>
+          </div>
+        </div>
+
+        <div class="resume-right">
+          <h3><b style="color: crimson;">Ko'nikmalar</b></h3>
+          <ul class="skills-list">
+            <li>Python</li>
+            <li>Django & Django REST</li>
+            <li>HTML/CSS/JavaScript</li>
+            <li>Git & GitHub</li>
+            <li>Responsive Design</li>
+            <li>PostgreSQL / SQLite</li>
+          </ul>
+        </div>
+      </div>
+      <a href="{% url 'portfolio' %}" class="btn next-btn">Next →</a>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

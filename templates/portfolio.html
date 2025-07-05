@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
+<style>
+  .next-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .next-btn {
+    background-color: #00bcd4;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .next-btn:hover {
+    background-color: #0097a7;
+  }
+</style>
+
+
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<section class="portfolio-section">
+  <h2 class="section-title">Mening Loyihalarim</h2>
+  <div class="portfolio-grid">
+
+    <!-- Loyihaning 1-kartasi -->
+    <div class="portfolio-card">
+      <div class="card-content">
+        <h3>Blogpost proyecti</h3>
+        <p>Django asosida yaratilgan oddiy blog platformasi.</p>
+        <a href="https://github.com/faxriddinprof/Blogpost-proyecti" target="_blank" class="btn-card">GitHub'da ko‘rish</a>
+      </div>
+    </div>
+
+    <!-- Loyihaning 2-kartasi -->
+    <div class="portfolio-card">
+      <div class="card-content">
+        <h3>coursera syti 'django for everybody' tasklari</h3>
+        <p>Foydalanuvchining joylashuvi asosida ob-havo ma'lumotlarini ko‘rsatadi.</p>
+        <a href="https://github.com/faxriddinprof/dj4e" target="_blank" class="btn-card">GitHub'da ko‘rish</a>
+      </div>
+    </div>
+
+    <!-- Loyihaning 3-kartasi -->
+    <div class="portfolio-card">
+      <div class="card-content">
+        <h3>Django3Task</h3>
+        <p>Oddiy ro‘yxat shaklidagi ishlar ro‘yxatini yuritish ilovasi.</p>
+        <a href="https://github.com/faxriddinprof/Django3Task" target="_blank" class="btn-card">GitHub'da ko‘rish</a>
+      </div>
+    </div>
+  </div>
+<!-- 👇 NEXT tugmasi o‘ng tomonda -->
+  <div class="next-btn-container">
+    <a href="{% url 'contact' %}" class="btn next-btn">Next →</a>
+  </div>
+</section>
+{% endblock %}

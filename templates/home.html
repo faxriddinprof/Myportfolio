@@ -1,0 +1,28 @@
+
+<!-- dsksjvfdn -->
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- <div id="particles-js"></div> -->
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+
+<section class="hero-section">
+  <div class="hero-content" data-tilt>
+
+    <h1>Welcome to <span class="name"><b style="color: firebrick; text-decoration: underline;">Faxriddin's</b></span> portfolio  
+    </h1>
+
+    <h2>Django Developer | Python | Web Dev</h2>
+    <a href="about" class="btn">Meni bilib oling</a>
+  </div>
+  <div class="hero-image" data-tilt>
+    <img src="{% static 'images/me.jpg' %}" alt="Mening rasmi">
+  </div>
+</section>
+
+
+
+{% endblock %}

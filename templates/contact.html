@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Aloqa{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<section class="contact-section">
+  <h2 class="section-title">Men bilan bog‘laning</h2>
+
+  <div class="contact-info">
+    <p><strong>📞 Tel:</strong> <a href="tel:+998937492005">+998 93 749 2005</a></p>
+    <p><strong>📧 Gmail:</strong> <a href="mailto:faxriddinbaxtiyorov144@gmail.com">faxriddinbaxtiyorov144@gmail.com</a></p>
+  </div>
+
+  <div class="social-contact">
+    <a href="https://t.me/faxriddinbaxtiyorov" target="_blank" class="social-box telegram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+      <span>Telegram orqali yozish</span>
+    </a>
+
+    <a href="https://instagram.com/_faxriddin.b" target="_blank" class="social-box instagram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      <span>Instagram orqali yozish</span>
+    </a>
+  </div>
+
+  <div class="back-home-btn">
+    <a href="{% url 'home' %}" class="btn">🏠 Home</a>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .contact-info a {
+    color: #00cfff;
+    text-decoration: none;
+  }
+
+  .social-contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .social-box {
+    background-color: #1e1e1e;
+    border: 2px solid transparent;
+    padding: 20px 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .social-box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .social-box span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .social-box.telegram {
+    border-color: #0088cc;
+  }
+
+  .social-box.instagram {
+    border-color: #e1306c;
+  }
+
+  .social-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .back-home-btn {
+    margin-top: 50px;
+  }
+
+  .btn {
+    background-color: #00bcd4;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #0097a7;
+  }
+</style>
+
+{% endblock %}
